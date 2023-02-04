@@ -1,11 +1,12 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="script.js"></script>
   </head>
   <body>
-    <?php 
-      echo "Hello World";
-    ?>
+    <div class="animation-container">
+      <div class="man"></div>
+      <div class="football"></div>
+    </div>
   </body>
+  <script src="script.js"></script>
 </html>
