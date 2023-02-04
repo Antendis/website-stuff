@@ -1,67 +1,33 @@
-const board = document.getElementById("game-board");
-const snake = document.getElementById("snake");
-const food = document.getElementById("food");
-const scoreCounter = document.getElementById("score");
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll("header nav a");
+    const speed = 0.3;
 
-let direction = "right";
-let score = 0;
-let x = 10;
-let y = 10;
+    links.forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
 
-// Handle arrow key inputs
-document.addEventListener("keydown", function(event) {
-  switch (event.keyCode) {
-    case 37: // Left arrow
-      direction = "left";
-      break;
-    case 38: // Up arrow
-      direction = "up";
-      break;
-    case 39: // Right arrow
-      direction = "right";
-      break;
-    case 40: // Down arrow
-      direction = "down";
-      break;
-  }
+            const targetId = this.getAttribute("href");
+            const targetPosition = document.querySelector(targetId).offsetTop;
+            const startPosition = window.pageYOffset;
+            let distance = targetPosition - startPosition;
+            let startTime = null;
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = easeInOutCubic(timeElapsed, startPosition, distance, 600);
+                window.scrollTo(0, run);
+                if (timeElapsed < 600) requestAnimationFrame(animation);
+            }
+
+            function easeInOutCubic(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t * t + b;
+                t -= 2;
+                return c / 2 * (t * t * t + 2) + b;
+            }
+
+            requestAnimationFrame(animation);
+        });
+    });
 });
-
-// Move the snake based on the direction
-function move() {
-  // Update the snake's position
-  switch (direction) {
-    case "left":
-      x -= 10;
-      break;
-    case "up":
-      y -= 10;
-      break;
-    case "right":
-      x += 10;
-      break;
-    case "down":
-      y += 10;
-      break;
-  }
-
-  snake.style.left = x + "px";
-  snake.style.top = y + "px";
-
-  // Check for collision with food
-  let foodX = parseInt(window.getComputedStyle(food).getPropertyValue("left"));
-  let foodY = parseInt(window.getComputedStyle(food).getPropertyValue("top"));
-
-  if (x === foodX && y === foodY) {
-    score++;
-    food.style.left = Math.floor(Math.random() * 49) * 10 + "px";
-    food.style.top = Math.floor(Math.random() * 49) * 10 + "px";
-  }
-
-  // Update the score
-  scoreCounter.innerHTML = `Score: ${score}`;
-
-  // Keep the game loop running
-  setTimeout(move, 100);
-}
-
-move();
