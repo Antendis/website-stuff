@@ -32,14 +32,22 @@ header nav a:hover {
 }
 
 main {
+  display: flex;
+  flex-wrap: wrap;
   padding: 3rem 1rem;
 }
 
 section {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 2rem 0;
+  flex-basis: calc(33.33% - 2rem);
+  margin: 2rem;
   padding: 2rem;
+}
+
+section:hover {
+  transform: translateY(-10px);
+  transition: all 0.3s;
 }
 
 section h2 {
@@ -63,4 +71,16 @@ section a {
 
 section a:hover {
   background-color: #005C99;
+}
+
+@media (max-width: 900px) {
+  section {
+    flex-basis: calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    flex-basis: 100%;
+  }
 }
