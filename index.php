@@ -6,26 +6,26 @@
     #game-board {
       width: 500px;
       height: 500px;
-      background-color: #967b4f;
-      border: 1px solid #715c3e;
+      background-color: #8B5E3C;
+      margin: 0 auto;
       position: relative;
     }
-    .snake-block {
-      width: 20px;
-      height: 20px;
-      background-color: #5c5c5c;
+
+    .snake-unit {
+      width: 10px;
+      height: 10px;
       position: absolute;
-    }
-    .food-block {
-      width: 20px;
-      height: 20px;
-      background-color: #c45c3e;
-      position: absolute;
+      background-color: #E9D67A;
     }
   </style>
 </head>
 <body>
-  <div id="game-board"></div>
+  <div id="game-board">
+    <div id="snake"></div>
+    <div id="food"></div>
+  </div>
+  <p id="score">Score: 0</p>
+
   <script src="script.js"></script>
 </body>
 </html>
