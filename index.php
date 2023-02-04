@@ -1,51 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>My Tech Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <title><?php echo $pageTitle; ?></title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
     <header>
-        <h1>My Tech Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+      <div class="logo">
+        <h1><?php echo $siteTitle; ?></h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
     </header>
 
     <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hi! I'm a tech enthusiast and I love to build things. I have experience in web development and programming. Check out my projects to see what I've been working on.</p>
-        </section>
-
-        <section id="projects">
-            <h2>My Projects</h2>
-            <ul>
-                <li><a href="#">Project 1</a></li>
-                <li><a href="#">Project 2</a></li>
-                <li><a href="#">Project 3</a></li>
-            </ul>
-        </section>
-
-        <section id="contact">
-            <h2>Get in Touch</h2>
-            <form action="submit.php" method="post">
-                <input type="text" name="name" placeholder="Name">
-                <input type="email" name="email" placeholder="Email">
-                <textarea name="message" placeholder="Message"></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </section>
+      <?php echo $pageContent; ?>
     </main>
 
     <footer>
-        <p>Copyright © 2023 My Tech Portfolio</p>
+      <p>&copy; <?php echo date('Y'); ?> <?php echo $siteTitle; ?></p>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
