@@ -1,9 +1,18 @@
-window.addEventListener('scroll', function() {
-  let scrollPos = window.scrollY;
-  let animationContainer = document.querySelector('.animation-container');
-  let man = document.querySelector('.man');
-  let football = document.querySelector('.football');
-  
-  man.style.transform = `translateX(${scrollPos/10}%) translateY(${scrollPos/20}%)`;
-  football.style.transform = `translateX(${scrollPos/5}%) translateY(-${scrollPos/10}%)`;
-});
+const gameBoard = document.querySelector("#game-board");
+const snake = [];
+const food = {};
+const blockSize = 20;
+let direction = "right";
+
+// Create the snake
+for (let i = 0; i < 5; i++) {
+  const snakeBlock = document.createElement("div");
+  snakeBlock.classList.add("snake-block");
+  snakeBlock.style.left = i * blockSize + "px";
+  snake.push(snakeBlock);
+  gameBoard.appendChild(snakeBlock);
+}
+
+// Generate a random location for the food
+function generateFood() {
+  const x = Math.floor(Math.random() * game
