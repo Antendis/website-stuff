@@ -1,21 +1,12 @@
-const gameBoard = document.querySelector("#game-board");
-const snake = [];
-const food = {};
-const blockSize = 20;
+const board = document.getElementById("game-board");
+const snake = document.getElementById("snake");
+const food = document.getElementById("food");
+const scoreCounter = document.getElementById("score");
+
 let direction = "right";
-
-// Create the snake
-for (let i = 0; i < 5; i++) {
-  const snakeBlock = document.createElement("div");
-  snakeBlock.classList.add("snake-block");
-  snakeBlock.style.left = i * blockSize + "px";
-  snake.push(snakeBlock);
-  gameBoard.appendChild(snakeBlock);
-}
-
-// Generate a random location for the food
-function generateFood() {
-  const x = Math.floor(Math.random() * game
+let score = 0;
+let x = 10;
+let y = 10;
 
 // Handle arrow key inputs
 document.addEventListener("keydown", function(event) {
@@ -34,3 +25,43 @@ document.addEventListener("keydown", function(event) {
       break;
   }
 });
+
+// Move the snake based on the direction
+function move() {
+  // Update the snake's position
+  switch (direction) {
+    case "left":
+      x -= 10;
+      break;
+    case "up":
+      y -= 10;
+      break;
+    case "right":
+      x += 10;
+      break;
+    case "down":
+      y += 10;
+      break;
+  }
+
+  snake.style.left = x + "px";
+  snake.style.top = y + "px";
+
+  // Check for collision with food
+  let foodX = parseInt(window.getComputedStyle(food).getPropertyValue("left"));
+  let foodY = parseInt(window.getComputedStyle(food).getPropertyValue("top"));
+
+  if (x === foodX && y === foodY) {
+    score++;
+    food.style.left = Math.floor(Math.random() * 49) * 10 + "px";
+    food.style.top = Math.floor(Math.random() * 49) * 10 + "px";
+  }
+
+  // Update the score
+  scoreCounter.innerHTML = `Score: ${score}`;
+
+  // Keep the game loop running
+  setTimeout(move, 100);
+}
+
+move();
