@@ -1,19 +1,39 @@
+body {
+  background-color: #8B5E3C;
+}
+
 #game-board {
   width: 500px;
   height: 500px;
-  background-color: #967b4f;
-  border: 1px solid #715c3e;
+  margin: 50px auto;
+  background-color: #C2B280;
+  border: 10px solid #967B4F;
   position: relative;
 }
-.snake-block {
-  width: 20px;
-  height: 20px;
-  background-color: #5c5c5c;
+
+#snake {
+  width: 10px;
+  height: 10px;
+  background-color: #6E4C1A;
   position: absolute;
+  left: 10px;
+  top: 10px;
 }
-.food-block {
-  width: 20px;
-  height: 20px;
-  background-color: #c45c3e;
+
+#food {
+  width: 10px;
+  height: 10px;
+  background-color: #967B4F;
   position: absolute;
+  left: 50px;
+  top: 50px;
+}
+
+#score {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  color: #6E4C1A;
 }
