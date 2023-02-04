@@ -1,52 +1,66 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  background-color: #f6f6f6;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+  background-color: #0072C6;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
-header h1 {
-    margin: 0;
-}
-
-header nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+header nav {
+  display: flex;
 }
 
 header nav a {
-    color: #fff;
-    display: block;
-    padding: 10px 20px;
-    text-decoration: none;
+  color: #fff;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  color: #ccc;
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+  padding: 3rem 1rem;
 }
 
 section {
-    background-color: #f2f2f2;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #ccc;
-    padding: 20px;
-    width: 60%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+  padding: 2rem;
 }
 
 section h2 {
-    margin: 0;
+  color: #0072C6;
+  margin-bottom: 1rem;
 }
 
-section form input,
-section form textarea
+section p {
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+section a {
+  background-color: #0072C6;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+section a:hover {
+  background-color: #005C99;
+}
