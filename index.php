@@ -1,7 +1,7 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="main.js"></script>
+    <script src="script.js"></script>
   </head>
   <body>
     <?php 
