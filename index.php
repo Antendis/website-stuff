@@ -1,8 +1,13 @@
+<!DOCTYPE html>
 <html>
-<head>
-<title>PHP Test</title>
-</head>
-<body>
-<?php echo '<p>Hello World</p>'; ?>
-</body>
+  <head>
+    <title>Hello Mother!</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <?php
+      echo "Hello Mother.";
+    ?>
+    <script src="script.js"></script>
+  </body>
 </html>
