@@ -3,9 +3,9 @@
   <head>
     <title>Rohail's Web Dev Testing</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script defer src="script.js"></script>
   </head>
   <body>
-    <script src="script.js"></script>
 
     <section class="hidden">
       <h1>Welcome to my site!</h1>
@@ -35,3 +35,4 @@
 
   </body>
 </html>
+
