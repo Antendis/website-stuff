@@ -14,7 +14,7 @@ body {
     display: grid;
     place-items: center;
     align-content: center;
-    margin-bottom: 300px; 
+    margin-bottom: 400px; 
     padding: 10px 10%;
   }
 
@@ -23,12 +23,6 @@ body {
     filter: blur(6px);
     transform: translateX(-70%);
     transition: all 0.78s;
-  }
-
-  @media(prefers-reduced-motion) {
-    .hidden {
-        transition: none;
-    }
   }
 
   .show {
