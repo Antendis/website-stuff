@@ -13,7 +13,7 @@
 
     <section class="hidden">
       <h1>Welcome to my site!</h1>
-      Hello Mother.
+      (Hello Mother.)
     </section>
 
     <section class="hidden">
