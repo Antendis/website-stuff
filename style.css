@@ -7,13 +7,14 @@ body {
   
   h1 {
     text-align: center;
+    font-family: 'DM Serif Display', serif;
   }
 
   section{
     display: grid;
     place-items: center;
     align-content: center;
-    min-height: 85vh;
+    margin-bottom: 220px; 
     padding: 10px 10%;
   }
 
