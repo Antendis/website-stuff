@@ -1,32 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
+
 body {
     background-color: #1a1b1c;
-    font-family: "Inter", sans-serif;
+    font-family: 'Fira Code', monospace;
     font-size: 20px;
     color: #dedede;
+
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 12%;
+    padding-right: 20%;
   }
   
   h1 {
-    text-align: center;
-    font-family: 'DM Serif Display', serif;
+    font-family: 'Outfit', sans-serif;
   }
 
   section{
-    display: grid;
-    place-items: center;
-    align-content: center;
     margin-bottom: 400px; 
-    padding: 10px 10%;
   }
 
   .hidden {
     opacity: 0;
     filter: blur(6px);
-    transform: translateX(-70%);
-    transition: all 0.78s;
+    transform: translateY(60%);
+    transition: all 0.5s;
   }
 
   .show {
     opacity: 0.9;
     filter: blur(0);
-    transform: translateX(0);
+    transform: translateY(0);
   }
