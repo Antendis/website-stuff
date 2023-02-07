@@ -13,17 +13,24 @@
   </head>
   
   <!------------------Stuff------------------>
-  <body>
-    <div id="header">
-      <div id="HiMyNameIs">
-        <p1>Hi, my name is</p1>
-      </div>
+  <body onload="window.scrollTo(0,0)">
 
-      <h1>Rohail Sheikh</h1>
+    <div id="hiMyNameIs">
+
+      Hi, my name is
+
     </div>
 
-    <section class="hidden">
+    <div id="header">
+
+      <h1>Rohail Sheikh</h1>
+
+    </div>
+
+    <section id="subheader" class="hidden">
+
       (Hello Mother.)
+
     </section>
 
     <section class="hidden">
@@ -47,3 +54,4 @@
     </section>
   </body>
 </html>
+
