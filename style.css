@@ -13,23 +13,50 @@ body {
     padding-right: 20%;
   }
   
-  h1 {
+  /*HERO TITLE STUFF*/
+
+  #header {
     font-family: 'Outfit', sans-serif;
+    font-size: 2em; 
+    margin-top: -6%;
+    margin-bottom: -2%;
   }
+
+  #hiMyNameIs {
+    font-family: 'Fira Code', monospace;
+    font-size: 1em; 
+  }
+
 
   section{
     margin-bottom: 400px; 
   }
 
+
+  /*FADE ANIMATIONS*/
   .hidden {
     opacity: 0;
     filter: blur(6px);
     transform: translateY(60%);
-    transition: all 0.5s;
+    transition: all 0.55s;
   }
 
   .show {
     opacity: 0.9;
     filter: blur(0);
     transform: translateY(0);
+  }
+
+
+
+
+  /*SCROLLBAR*/
+  body::-webkit-scrollbar {
+    width: 0.35em;
+    background-color: #1a1b1c;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #dedede;
+    border-radius: 10px;
   }
