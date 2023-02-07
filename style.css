@@ -15,17 +15,41 @@ body {
   
   /*HERO TITLE STUFF*/
 
-  #header {
-    font-family: 'Outfit', sans-serif;
-    font-size: 2em; 
-    margin-top: -6%;
-    margin-bottom: -2%;
+  #himynameis {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em; 
+    transition-delay: 0;
   }
 
-  #hiMyNameIs {
-    font-family: 'Fira Code', monospace;
-    font-size: 1em; 
+  #bigname {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.8em; 
+    margin-top: -4%;
+    margin-bottom: -6%;
+    transition-delay: 150ms;
   }
+
+  #shortsummary {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.6em; 
+    margin-top: -6%;
+    margin-bottom: -2%;
+    transition-delay: 400ms;
+  }
+
+  #summary {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8em; 
+    transition-delay: 650ms;
+  }
+
+
+
+
+
+
+
+
 
 
   section{
