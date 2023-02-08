@@ -5,21 +5,42 @@ body {
     background-color: #141617;
     font-family: 'Fira Code', monospace;
     font-size: 20px;
-    color: #c0bcb8;
+    color: #b0cdf1;
 
     padding-top: 10%;
     padding-bottom: 10%;
     padding-left: 12%;
     padding-right: 20%;
   }
+
+  /* RIBBON */
+  header {
+    position: fixed;
+    top: 0;
+    height: 30px;
+    width: 100%;
+    background-color: #141617;
+    padding: 20px;
+    text-align: center;
+    transition: top 0.5s ease;
+    margin-left: -13%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+  }
+  
+  header.hidden {
+    top: -30px;
+  }
+
+  /*wcdawdcwadcawcdacwdawcaw */
   
   /* HERO TITLE STUFF */
 
   #himynameis {
+    color: #00A4E9;
     font-family: 'Fira Code', monospace;
     font-size: 0.9em; 
     transition-delay: 0;
-    padding-left: 2%;
+    padding-left: 1%;
   }
 
   #bigname {
@@ -36,6 +57,7 @@ body {
     margin-top: -6%;
     margin-bottom: -2%;
     transition-delay: 400ms;
+    opacity: 55%;
   }
 
   #summary {
