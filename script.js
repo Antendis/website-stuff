@@ -5,10 +5,7 @@
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             entry.target.classList.add("show");
-        } else {
-            entry.target.classList.remove("show");
-        }
-
+        } 
     });
  });
 
@@ -16,6 +13,6 @@ const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
 //to top when refreshed
-window.onbeforeunload = function () {
+window.onload = function() {
     window.scrollTo(0, 0);
-  }
+  };

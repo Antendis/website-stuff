@@ -13,12 +13,13 @@ body {
     padding-right: 20%;
   }
   
-  /*HERO TITLE STUFF*/
+  /* HERO TITLE STUFF */
 
   #himynameis {
     font-family: 'Fira Code', monospace;
     font-size: 0.9em; 
     transition-delay: 0;
+    padding-left: 2%;
   }
 
   #bigname {
@@ -46,19 +47,12 @@ body {
 
 
 
-
-
-
-
-
-
-
   section{
     margin-bottom: 400px; 
   }
 
 
-  /*FADE ANIMATIONS*/
+  /* FADE ANIMATIONS */
   .hidden {
     opacity: 0;
     filter: blur(6px);
@@ -75,7 +69,7 @@ body {
 
 
 
-  /*SCROLLBAR*/
+  /* SCROLLBAR */
   body::-webkit-scrollbar {
     width: 0.35em;
     background-color: #141617;
@@ -85,3 +79,51 @@ body {
     background-color: #27292b;
     border-radius: 10px;
   }
+
+
+  
+    /* SIDE BARS (only show for desktop) */
+  @media only screen and (min-width: 768px) {
+
+    /* desktop */
+    .element {
+      display: block;
+    }
+  }
+
+
+  
+
+
+  @media only screen and (max-width: 767px) {
+    /* mobile */
+    .element {
+      display: none;
+    }
+
+    #bigname {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.8em; 
+      margin-top: -16%;
+      margin-bottom: -16%;
+      transition-delay: 150ms;
+    }
+
+    #shortsummary {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.2em; 
+      margin-top: -6%;
+      margin-bottom: -2%;
+      transition-delay: 400ms;
+    }
+
+    #summary {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.8em; 
+      transition-delay: 650ms;
+      margin-right: 12%;
+    }
+
+  }
+
+  
